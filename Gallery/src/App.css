@@ -1,6 +1,11 @@
+.screen{
+  box-sizing: border-box;
+  width: 100%;
+}
+
 .container{
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   height: 125px;
   display: flex;
   justify-content: center;
@@ -22,7 +27,7 @@
 .gallery{
   box-sizing: border-box;
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -85,6 +90,7 @@
 
 
 .reviews{
+  width: 100%;
   animation: fadeInLate 3s linear;
 }
 

@@ -359,47 +359,49 @@ function App() {
 
   return (
     <>
-    <div className="container">
-      <img src={header} height="100px" width="300px" className="headerImg"></img>
-    </div>
-    <div className="gallery">
-      {firstSixImages.map((image)=> (
-        <img className="firstSix" src={image} alt="Refaced Kitchen" width="100%"/>
-      ))}
-      {images.map((image) => (
-        <img src={image} alt="Refaced Kitchen" width="100%" loading="lazy"/>
-      ))}
-    </div>
-    <hr></hr>
-    <div className="reviews">
-      <h2>Google Reviews</h2>
-      {googleReviews.map((r) => (
-        <>
-          <blockquote>"{r.review}"</blockquote>
-          <cite>- <i>{r.reviewer}</i></cite>
-        </>
-      ))}
-      <h2>Yelp Reviews</h2>
-      {yelpReviews.map((r) => (
-        <>
-          <blockquote>"{r.review}"</blockquote>
-          <cite>- <i>{r.reviewer}</i></cite>
-        </>
-      ))}
-      <h2>Angi's List Reviews</h2>
-      {angiReviews.map((r) => (
-        <>
-          <blockquote>"{r.review}"</blockquote>
-          <cite>- <i>{r.reviewer}</i></cite>
-        </>
-      ))}
-      <h2>Houzz Reviews</h2>
-      {angiReviews.map((r) => (
-        <>
-          <blockquote>"{r.review}"</blockquote>
-          <cite>- <i>{r.reviewer}</i></cite>
-        </>
-      ))}
+    <div className="screen">
+      <div className="container">
+        <img src={header} height="100px" width="300px" className="headerImg"></img>
+      </div>
+      <div className="gallery">
+        {firstSixImages.map((image)=> (
+          <img className="firstSix" src={image} alt="Refaced Kitchen" width="100%"/>
+        ))}
+        {images.map((image) => (
+          <img src={image} alt="Refaced Kitchen" width="100%" loading="lazy"/>
+        ))}
+      </div>
+
+      <div className="reviews">
+        <h2>Google Reviews</h2>
+        {googleReviews.map((r) => (
+          <>
+            <blockquote>"{r.review}"</blockquote>
+            <cite>- <i>{r.reviewer}</i></cite>
+          </>
+        ))}
+        <h2>Yelp Reviews</h2>
+        {yelpReviews.map((r) => (
+          <>
+            <blockquote>"{r.review}"</blockquote>
+            <cite>- <i>{r.reviewer}</i></cite>
+          </>
+        ))}
+        <h2>Angi's List Reviews</h2>
+        {angiReviews.map((r) => (
+          <>
+            <blockquote>"{r.review}"</blockquote>
+            <cite>- <i>{r.reviewer}</i></cite>
+          </>
+        ))}
+        <h2>Houzz Reviews</h2>
+        {angiReviews.map((r) => (
+          <>
+            <blockquote>"{r.review}"</blockquote>
+            <cite>- <i>{r.reviewer}</i></cite>
+          </>
+        ))}
+      </div>
     </div>
     </>
   )
