@@ -98,6 +98,7 @@ import ninetythree from './images/93.png'
 import ninetyfour from './images/94.png'
 
 import header from './images/header.png'
+import woodBG from './images/woodBG.gpeg'
 
 
 
