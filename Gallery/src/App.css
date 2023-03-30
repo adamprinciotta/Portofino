@@ -1,10 +1,14 @@
 .container{
+  box-sizing: border-box;
   width: 100vw;
   height: 125px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #494031;
+  
+  margin: 0 0;
+  padding: 0 0;
 }
 
 *{
@@ -16,18 +20,82 @@
 }
 
 .gallery{
+  box-sizing: border-box;
   margin: 0 auto;
-  width: 100%;
+  width: 100vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+}
+
+@keyframes fadeInLeft{
+  0%{
+    opacity: 25%;
+    transform: translateX(-100%);
+  }
+  50%{
+    opacity: 50%;
+    transform: translateX(-50%);
+  }
+  100%{
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeInRight{
+  0%{
+    opacity: 25%;
+    transform: translateX(100%);
+  }
+  50%{
+    opacity: 50%;
+    transform: translateX(50%);
+  }
+  100%{
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+.headerImg{
+  animation: fadeInLate .75s linear;
+}
+
+.firstSix:nth-child(1), .firstSix:nth-child(3), .firstSix:nth-child(5){
+  animation: fadeInLeft .75s linear;
+}
+
+.firstSix:nth-child(2), .firstSix:nth-child(4), .firstSix:nth-child(6){
+  animation: fadeInRight .75s linear;
+}
+
+
+@keyframes fadeInLate{
+  0%{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 25%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+
+.reviews{
+  animation: fadeInLate 3s linear;
+}
+
+hr{
+  animation: fadeInLate 3s linear;
 }
 
 img{
   border-radius: 5px;
   width: 100%;
   height: 100%;
-  /* height: auto; */
   object-fit: fill;
 }
 
@@ -111,12 +179,19 @@ h2{
   font-family:Arial, Helvetica, sans-serif
 }
 
+blockquote{
+  text-align: center;
+}
+
 cite{
   display: flex;
   justify-content: center;
   text-align: center;
   margin-top: -15px;
   padding-bottom: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
+.reviews{
+  color: white;
+}
