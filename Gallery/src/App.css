@@ -17,6 +17,7 @@
 
 *{
   background-color: #494031;
+  overflow-x: hidden;
 }
 
 .container img{
@@ -38,6 +39,24 @@ a{
   font-size: 18px;
   text-decoration: none;
   align-items: center;
+  animation: fadeInBottom .75s linear;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+@keyframes fadeInBottom{
+  0%{
+    opacity: 25%;
+    transform: translateY(100%);
+  }
+  50%{
+    opacity: 50%;
+    transform: translateY(50%);
+  }
+  100%{
+    opacity: 100%;
+    transform: translateY(0%);
+  }
 }
 
 .gallery{
