@@ -98,7 +98,7 @@ import ninetythree from './images/93.png'
 import ninetyfour from './images/94.png'
 
 import header from './images/header.png'
-import woodBG from './images/woodBG.gpeg'
+// import woodBG from './images/woodBG.gpeg'
 
 
 
@@ -361,6 +361,7 @@ function App() {
   return (
     <>
     <div className="screen">
+      <a href="https://www.atlanticrefacing.com/">Back to Main Site</a>
       <div className="container">
         <img src={header} height="100px" width="300px" className="headerImg"></img>
       </div>
@@ -396,7 +397,7 @@ function App() {
           </>
         ))}
         <h2>Houzz Reviews</h2>
-        {angiReviews.map((r) => (
+        {houzzReviews.map((r) => (
           <>
             <blockquote>"{r.review}"</blockquote>
             <cite>- <i>{r.reviewer}</i></cite>
