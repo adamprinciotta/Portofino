@@ -42,19 +42,24 @@ a{
   animation: fadeInBottom .75s linear;
   z-index: 100;
   border-radius: 10px;
+  opacity: 50%;
+}
+
+a:hover{
+  opacity: 100%;
 }
 
 @keyframes fadeInBottom{
   0%{
-    opacity: 25%;
+    opacity: 0%;
     transform: translateY(100%);
   }
   50%{
-    opacity: 50%;
+    opacity: 25%;
     transform: translateY(50%);
   }
   100%{
-    opacity: 100%;
+    opacity: 50%;
     transform: translateY(0%);
   }
 }
@@ -102,11 +107,11 @@ a{
   animation: fadeInLate .75s linear;
 }
 
-.firstSix:nth-child(1), .firstSix:nth-child(3), .firstSix:nth-child(5){
+.firstTen:nth-child(1), .firstTen:nth-child(3), .firstTen:nth-child(5), .firstTen:nth-child(7), .firstTen:nth-child(9){
   animation: fadeInLeft .75s linear;
 }
 
-.firstSix:nth-child(2), .firstSix:nth-child(4), .firstSix:nth-child(6){
+.firstTen:nth-child(2), .firstTen:nth-child(4), .firstTen:nth-child(6), .firstTen:nth-child(8), .firstTen:nth-child(10){
   animation: fadeInRight .75s linear;
 }
 
@@ -126,7 +131,7 @@ a{
 
 .reviews{
   width: 100%;
-  animation: fadeInLate 3s linear;
+  animation: fadeInLate 1s linear;
 }
 
 hr{
@@ -246,4 +251,53 @@ i{
   background-color: transparent;
   /* https://www.pexels.com/photo/brown-parquet-172276/ */
   /* background-image: url('./images/woodBG.jpeg'); */
+}
+
+
+.reviewButton, .galleryButton{
+  /* position: absolute;
+  width: 7vw;
+  height: 5vh;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  background-color: white;
+  font-size: 1rem;
+  align-items: center;
+  text-align: center; */
+  height: 25px;
+  width: 150px;
+  background-color: white;
+  position: fixed;
+  right: 1%;
+  top: 1%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid black;
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  align-items: center;
+  z-index: 100;
+  border-radius: 10px;
+  opacity: 50%;
+  animation: fadeInLateButton .5s linear;
+}
+
+@keyframes fadeInLateButton {
+  0%{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 25%;
+  }
+  100%{
+    opacity: 50%;
+  }
+}
+
+.galleryButton:hover, .reviewButton:hover{
+  opacity: 100%;
+  cursor: pointer;
 }

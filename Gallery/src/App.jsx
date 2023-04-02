@@ -105,14 +105,22 @@ import header from './images/header.png'
 import React from 'react';
 
 function App() {
+
+  const [view, setView] = useState(0);
+
+  function handleGalleryClick() {
+    window.scrollTo(0, 0);
+    setView(0)
+  }
+
+  function handleReviewClick() {
+    window.scrollTo(0, 0);
+    setView(1)
+  }
   
-  const firstSixImages = [one, two, three, four, five, six]
+  const firstTenImages = [one, two, three, four, five, six, seven, eight, nine, ten]
 
   const images = [
-    seven,
-    eight,
-    nine,
-    ten,
     eleven,
     twelve,
     thirteen,
@@ -360,21 +368,32 @@ function App() {
 
   return (
     <>
-    <div className="screen">
+    <div className="screen" id="topOfScreen">
       <a href="https://www.atlanticrefacing.com/">Back to Main Site</a>
+
       <div className="container">
         <img src={header} height="100px" width="300px" className="headerImg"></img>
       </div>
+        
+        
+      {view === 0 && 
+      <>
+      <button class="reviewButton" onClick={handleReviewClick}>Reviews</button>
       <div className="gallery">
-        {firstSixImages.map((image)=> (
-          <img className="firstSix" src={image} alt="Refaced Kitchen" width="100%"/>
-        ))}
-        {images.map((image) => (
-          <img src={image} alt="Refaced Kitchen" width="100%" loading="lazy"/>
-        ))}
-      </div>
-
+            {firstTenImages.map((image) => (
+              <img className="firstTen" src={image} alt="Refaced Kitchen" width="100%" />
+            ))}
+            {images.map((image) => (
+              <img src={image} alt="Refaced Kitchen" width="100%" loading="lazy" />
+            ))}
+          </div>
+        </>
+      }
+      
+      {view === 1 && 
+      
       <div className="reviews">
+        <button class="galleryButton" onClick={handleGalleryClick}>Gallery</button>
         <h2>Google Reviews</h2>
         {googleReviews.map((r) => (
           <>
@@ -403,7 +422,8 @@ function App() {
             <cite>- <i>{r.reviewer}</i></cite>
           </>
         ))}
-      </div>
+      </div>}
+      
     </div>
     </>
   )
