@@ -25,12 +25,12 @@
 }
 
 a{
-  height: 25px;
+  height: 30px;
   width: 150px;
   background-color: white;
   position: fixed;
-  right: 1%;
-  bottom: 1%;
+  left: 1%;
+  top: 1%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -39,10 +39,10 @@ a{
   font-size: 18px;
   text-decoration: none;
   align-items: center;
-  animation: fadeInBottom .75s linear;
+  animation: fadeInLate 1s linear;
   z-index: 100;
   border-radius: 10px;
-  opacity: 50%;
+  opacity: 100%;
 }
 
 a:hover{
@@ -265,7 +265,7 @@ i{
   font-size: 1rem;
   align-items: center;
   text-align: center; */
-  height: 25px;
+  height: 30px;
   width: 150px;
   background-color: white;
   position: fixed;
@@ -281,7 +281,7 @@ i{
   align-items: center;
   z-index: 100;
   border-radius: 10px;
-  opacity: 50%;
+  opacity: 100%;
   animation: fadeInLateButton .5s linear;
 }
 

@@ -5,6 +5,7 @@ import './App.css'
 import one from './images/1.png'
 import two from './images/2.png'
 import three from './images/3.png'
+import threeEdit from './images/3edit.png'
 import four from './images/4.png'
 import five from './images/5.png'
 import six from './images/6.png'
@@ -90,12 +91,6 @@ import eightyfive from './images/85.png'
 import eightysix from './images/86.png'
 import eightyseven from './images/87.png'
 import eightyeight from './images/88.png'
-import eightynine from './images/89.png'
-import ninety from './images/90.png'
-import ninetyone from './images/91.png'
-import ninetytwo from './images/92.png'
-import ninetythree from './images/93.png'
-import ninetyfour from './images/94.png'
 
 import header from './images/header.png'
 // import woodBG from './images/woodBG.gpeg'
@@ -118,7 +113,7 @@ function App() {
     setView(1)
   }
   
-  const firstTenImages = [one, two, three, four, five, six, seven, eight, nine, ten]
+  const firstTenImages = [one, two, threeEdit, four, five, six, seven, eight, nine, ten]
 
   const images = [
     eleven,
@@ -198,13 +193,7 @@ function App() {
     eightyfive,
     eightysix,
     eightyseven,
-    eightyeight,
-    eightynine,
-    ninety,
-    ninetyone,
-    ninetytwo,
-    ninetythree,
-    ninetyfour
+    eightyeight
   ];
 
   const googleReviews = [
@@ -378,7 +367,7 @@ function App() {
         
       {view === 0 && 
       <>
-      <button class="reviewButton" onClick={handleReviewClick}>Reviews</button>
+      <button className="reviewButton" onClick={handleReviewClick}>Reviews</button>
       <div className="gallery">
             {firstTenImages.map((image) => (
               <img className="firstTen" src={image} alt="Refaced Kitchen" width="100%" />
@@ -393,7 +382,7 @@ function App() {
       {view === 1 && 
       
       <div className="reviews">
-        <button class="galleryButton" onClick={handleGalleryClick}>Gallery</button>
+        <button className="galleryButton" onClick={handleGalleryClick}>Gallery</button>
         <h2>Google Reviews</h2>
         {googleReviews.map((r) => (
           <>
