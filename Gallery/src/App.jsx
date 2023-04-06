@@ -93,7 +93,7 @@ import eightysix from "./images/86.png";
 import eightyseven from "./images/87.png";
 import eightyeight from "./images/88.png";
 
-import header from "./images/header.png";
+import header from "./images/fixedHeader.png";
 // import woodBG from './images/woodBG.gpeg'
 
 import React from "react";
