@@ -66,11 +66,15 @@ a:hover{
 
 .gallery{
   box-sizing: border-box;
+}
+
+.photos{
   margin: 0 auto;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+  padding-top: 50px;
 }
 
 @keyframes fadeInLeft{
@@ -153,14 +157,27 @@ img{
   z-index: -2;
 }
 
-h1{
+/* h1{
   color: #699832;
   position: absolute;
   left: 38%;
   top: 0vh;
   font-size: 1rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
-}
+} */
+
+ h1{
+  position: absolute;
+  background-color: transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120px;
+  color: #729539;
+  width: 100%;
+  text-align: center;
+  animation: fadeInLate .75s linear;
+ /* -webkit-text-stroke: .5px  #E2EAB8;  */
+} 
 
 h5{
   position: absolute;
@@ -301,3 +318,18 @@ i{
   opacity: 100%;
   cursor: pointer;
 }
+
+@media (max-width: 950px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* @media (max-width: 400px){
+  h1{
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    left: 75%;
+  }
+} */
