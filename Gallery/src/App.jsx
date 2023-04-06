@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Modal from './components/Modal.jsx'
 import one from './images/1.png'
 import two from './images/2.png'
 import three from './images/3.png'
@@ -109,6 +110,7 @@ function App() {
   }
 
   function handleReviewClick() {
+    setShowModal(false);
     window.scrollTo(0, 0);
     setView(1)
   }
@@ -355,13 +357,21 @@ function App() {
   //   review: ""
   // },
 
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  function handleImageClick(imageSrc) {
+    setSelectedImage(imageSrc);
+    setShowModal(true);
+  }
+
   return (
     <>
     <div className="screen" id="topOfScreen">
       <a href="https://www.atlanticrefacing.com/">Back to Main Site</a>
 
       <div className="container">
-        <img src={header} height="100px" width="300px" className="headerImg"></img>
+        <img src={header} height="100px" width="300px" className="headerImg" ></img>
       </div>
         
         
@@ -370,17 +380,16 @@ function App() {
       <button className="reviewButton" onClick={handleReviewClick}>Reviews</button>
       <div className="gallery">
             {firstTenImages.map((image) => (
-              <img className="firstTen" src={image} alt="Refaced Kitchen" width="100%" />
+              <img className="firstTen" src={image} alt="Refaced Kitchen" width="100%" onClick={() => handleImageClick(image)}/>
             ))}
             {images.map((image) => (
-              <img src={image} alt="Refaced Kitchen" width="100%" loading="lazy" />
+              <img src={image} alt="Refaced Kitchen" width="100%" loading="lazy" onClick={() => handleImageClick(image)}/>
             ))}
           </div>
         </>
       }
       
       {view === 1 && 
-      
       <div className="reviews">
         <button className="galleryButton" onClick={handleGalleryClick}>Gallery</button>
         <h2>Google Reviews</h2>
@@ -412,7 +421,9 @@ function App() {
           </>
         ))}
       </div>}
-      
+      {showModal && (
+        <Modal imageSrc={selectedImage} imageAlt="modal image" showModal={showModal} setShowModal={setShowModal}/>
+      )}
     </div>
     </>
   )
