@@ -1,0 +1,15 @@
+*{
+  margin: 0 0;
+}
+
+.navLinks{
+  width: 100vw;
+ display: flex;
+ flex-direction: row;
+}
+
+.navLinks ul{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
