@@ -1,15 +1,129 @@
 *{
-  margin: 0 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans",sans-serif;
 }
 
 .navLinks{
-  width: 100vw;
+  width: 100%;
  display: flex;
  flex-direction: row;
+ border-bottom: 1px solid #ccc19f7c;
+ height: 100px;
+ align-items: center;
+ margin-right: 5%;
 }
 
-.navLinks ul{
+
+/* .navLinks ul{
+  /* position: absolute; */
+  /* top: 2.5%; */
+
+  /* width: 50%; */
+  /* left: 50%; 
+  width: 75%;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+} */
+
+img{
+  margin-left: 5vw;
+  margin-top: 1vw;
+}
+
+
+.navLinks ul {
+  list-style-type: none;
+  margin: 0;
+  padding-right: 10px;
   display: flex;
-  width: 100%;
   justify-content: space-evenly;
+  margin-left: auto;
+  width: 55%;
+  align-items: center;
+  height: 100%;
+}
+
+.navLinks ul li {
+  /* display: inline-block;
+  margin-right: 20px; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.navLinks ul li:last-child {
+  margin-right: 0;
+}
+
+
+.navLinks ul a{
+  text-decoration: none;
+  color: white;
+
+}
+
+.navLinks li:hover{
+  border-bottom: 2px solid rgba(255, 0, 0, 0.445);
+}
+
+.container{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: linear-gradient(to bottom,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 100%);
+}
+
+.header{
+  width: 100%;
+  display: flex;
+}
+
+.call{
+  background-color: #CCC19F;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  /* border: 1px solid black; */
+  margin-right: 10px;
+  /* color: #1B1C3E; */
+}
+
+h4{
+  color: #1b1c1d;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.call a{
+  text-decoration: none;
+  color: #1b1c1d;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.call a:hover {
+  animation: 0.5s fadeLink forwards ease-in-out;
+}
+
+@keyframes fadeLink {
+  0% {
+    color: #1b1c1d;
+  }
+  100% {
+    color: white;
+  }
 }
