@@ -1,89 +1,181 @@
-.homeContainer{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    justify-content: center;
-    display: flex;
+.homeContainer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 0;
 }
 
-video{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: -1;
+video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
+.homeTopSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 50%; */
+}
 
 .homeCenterDiv {
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    text-align: center;
-  }
-  
-
-h2{
-    display: none;
+  width: 80%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
 }
 
-.current{
-    color: black;
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 30px;
-    animation: 4s fadeIn ease-in-out;
+h2 {
+  display: none;
+}
+
+.current {
+  color: black;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  animation: 4s fadeIn ease-in-out;
 }
 
 @keyframes fadeIn {
-    0%{
-        opacity: 0%
-    }
-    20%{
-        opacity: 100%
-    }
-    80%{
-        opacity: 100%
-    }
-    100%{
-        opacity: 0%;
-    }
+  0% {
+    opacity: 0%;
+  }
+  20% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
 }
 
-.homeBtn{
-    background-color: #CCC19F;
-    text-transform: uppercase;
-    padding: 20px 40px;
-    border-radius: 0;
+.homeBtn {
+  background-color: #ccc19f;
+  text-transform: uppercase;
+  padding: 20px 40px;
+  border-radius: 0;
 }
 
-.homeBtnTop{
-    font-size: 24px;
-    font-weight: 500;
+.homeBtn:hover {
+  animation: 0.25s getStarted forwards;
 }
 
-.homeBtnBottom{
-    font-size: 14px;
-    font-weight: 300;
+@keyframes getStarted {
+  0% {
+    border: 1px solid white;
+  }
+
+  100% {
+    background-color: white;
+    border: 1px solid white;
+  }
 }
 
-.homeContainer h1{
-    color: black;
-    font-size: 30px;
+.homeBtnTop {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.homeBtnBottom {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.homeContainer h1 {
+  color: black;
+  font-size: 30px;
 }
 
 section {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
-img{
-margin: auto;
+img {
+  margin: auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1px;
+  /* background-color: #000;
+  opacity: 0.8; */
+}
+
+.gridElement {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* This creates a 4:3 aspect ratio */
+}
+
+.ba {
+  background-image: url("../images/beforeAndAfterHome.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews{
+    background-image: url("../images/reviewsHome.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.remodel{
+    background-image: url("../images/remodelHome.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.process{
+    background-image: url("../images/processHome.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.expect{
+    background-image: url('../images/expectHome.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.showroom{
+    background-image: url('../images/showHome.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }

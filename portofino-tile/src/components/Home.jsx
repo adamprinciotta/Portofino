@@ -29,8 +29,8 @@ function Home(){
     return(
         <>
         <div className="homeContainer">
-            <video src={homepageVideo} autoPlay="autoplay" preload="auto" loop="loop" muted="muted"></video>
-            <section>
+            <video src={homepageVideo} autoPlay="autoplay" preload="auto" loop="loop" muted="muted" crossOrigin='use-credentials'></video>
+            <section className="homeTopSection">
             <div className="homeCenterDiv">
                 <img src={homeCenter} width="50%"></img>
                 <br></br>
@@ -47,6 +47,26 @@ function Home(){
             <br></br>
             <h1>NC LICENSED GENERAL CONTRACTOR #86537</h1>
             </div>
+            </section>
+            <section className="gridContainer">
+                <div className="gridElement ba">
+                    Before & After
+                </div>
+                <div className="gridElement reviews">
+                    Hand-Written Reviews
+                </div>
+                <div className="gridElement remodel">
+                    Bath Remodeling Experts
+                </div>
+                <div className="gridElement process">
+                    Our Process
+                </div>
+                <div className="gridElement expect">
+                    What to Expect
+                </div>
+                <div className="gridElement showroom">
+                    See our Showroom
+                </div>
             </section>
         </div>
         </>
