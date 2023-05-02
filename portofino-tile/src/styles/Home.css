@@ -94,6 +94,7 @@ h2 {
 .homeBtnBottom {
   font-size: 14px;
   font-weight: 300;
+  border: none;
 }
 
 .homeContainer h1 {
@@ -118,13 +119,30 @@ img {
   opacity: 0.8; */
 }
 
+/* .gridElement {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 75%; This creates a 4:3 aspect ratio 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
 .gridElement {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 0;
-  padding-bottom: 75%; /* This creates a 4:3 aspect ratio */
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+
 
 .ba {
   background-image: url("../images/beforeAndAfterHome.jpg");
@@ -132,7 +150,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .reviews{
@@ -141,7 +159,7 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .remodel{
@@ -150,7 +168,7 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .process{
@@ -159,7 +177,7 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .expect{
@@ -168,7 +186,7 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .showroom{
@@ -177,5 +195,33 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+}
+
+.gridHeader{
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+article p{
+  color: white;
+  text-align: center;
+}
+
+.divider{
+  width: 100px;
+  height: 1px;
+  border: 1px solid #ccc19f;
+  z-index: 10;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.gridBtn {
+  border: none;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
 }

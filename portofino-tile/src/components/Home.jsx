@@ -50,7 +50,16 @@ function Home(){
             </section>
             <section className="gridContainer">
                 <div className="gridElement ba">
-                    Before & After
+                    <div className="gridHeader">Before & After</div>
+                    <article>
+                        <p>
+                            See some of the beautiful bathrooms we have designed and installed for our clients.
+                        </p>
+                        <br></br>
+                        <div className="divider"></div>
+                    </article>
+                    <br></br>
+                    <a><button className="gridBtn">View Gallery</button></a>
                 </div>
                 <div className="gridElement reviews">
                     Hand-Written Reviews
