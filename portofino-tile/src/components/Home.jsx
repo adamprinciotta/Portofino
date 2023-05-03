@@ -3,6 +3,8 @@ import homepageVideo from '../images/homepage-fade.mp4'
 import homeCenter from '../images/HomeCenter.png'
 import '../styles/Home.css'
 
+import beforeAfter from '../images/beforeAndAfterHome.jpg'
+
 function Home(){
 
     const [current, setCurrent] = useState(0);
@@ -50,31 +52,34 @@ function Home(){
             </section>
             <section className="gridContainer">
                 <div className="gridElement ba">
+                    <img src={beforeAfter}></img>
                     <div className="gridHeader">Before & After</div>
-                    <article>
-                        <p>
-                            See some of the beautiful bathrooms we have designed and installed for our clients.
-                        </p>
+                    <div className="gridHidden">
+                        <article>
+                            <p>
+                                See some of the beautiful bathrooms we have designed and installed for our clients.
+                            </p>
+                            <br></br>
+                            <div className="divider"></div>
+                        </article>
                         <br></br>
-                        <div className="divider"></div>
-                    </article>
-                    <br></br>
-                    <a><button className="gridBtn">View Gallery</button></a>
+                        <a><button className="gridBtn">View Gallery</button></a>
+                    </div>
                 </div>
                 <div className="gridElement reviews">
-                    Hand-Written Reviews
+                    <div className="gridHeader">Hand-Written Reviews</div>
                 </div>
                 <div className="gridElement remodel">
-                    Bath Remodeling Experts
+                    <div className="gridHeader">Bath Remodeling Experts</div>
                 </div>
                 <div className="gridElement process">
-                    Our Process
+                    <div className="gridHeader">Our Process</div>
                 </div>
                 <div className="gridElement expect">
-                    What to Expect
+                    <div className="gridHeader">What to Expect</div>
                 </div>
                 <div className="gridElement showroom">
-                    See our Showroom
+                    <div className="gridHeader">See our Showroom</div>
                 </div>
             </section>
         </div>
